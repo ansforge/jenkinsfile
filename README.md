@@ -26,11 +26,7 @@ Le pipeline dépend du langage de programmation et du framework utilisés.
 |AnsPipelinePuppetNomad          | Puppet 6 |Aucun|
 |AnsPipelinePython               | Python |Aucun|
 |AnsPipelineAny  |Tout            |Aucun            |
-|AnsPipelineEnvP6          |Puppet             |Aucun            |
-TODO :
-AnsPipelineDeployNomad
-AnsPipelineJdk21Mvn39Nomad
-AnsPipelineJdkMvn
+
 
 
 Ensuite, chacun de ces pipelines peut être personnalisée en fonction à chaque étape.
@@ -55,9 +51,9 @@ Ensuite, chacun de ces pipelines peut être personnalisée en fonction à chaque
 |trivyParams          | permet d'envoyer des paramètres à Trivy |trivyParams: "--ignore-unfixed"|
 |trivySeverity               | permet d'indiquer les criticités à analyser sur l'image analysée par Trivy |trivySeverity: "HIGH,CRITICAL,MEDIUM,LOW,UNKNOWN"|
 |isAngular              | permet d'indiquer que le projet est en Angular |isAngular:"true"|
-|jobToDeploy          | permet d'indiquer un job Jenkins à lancer > job Puppet | pathJobToDeploy: "ANS/Annuaire/ATOS-FINESS/deploiement/develop"|
+|jobToDeploy          | permet d'indiquer un job Jenkins à lancer > job Puppet | pathJobToDeploy: "ANS/Annuaire/deploiement/develop"|
 |isTriggerJob          | permet de conditionner le job à trigger pour les jobs de déploiement | isTriggerJob:"true"|
-|pathJobToDeploy          | permet d'indiquer un job Jenkins à lancer > job de deploiement type Nomad | pathJobToDeploy: "ANS/Annuaire/ATOS-FINESS/deploiement/develop"|
+|pathJobToDeploy          | permet d'indiquer un job Jenkins à lancer > job de deploiement type Nomad | pathJobToDeploy: "ANS/Annuaire/deploiement/develop"|
 |isChangelog          | permet de créer un changelog à partir d'un script shell et de le pousser dans l'application | isChangelog:"true"|
 |featureBranchSnapshot               | permet de créer les snapshots des branches feature/ et de les pousser dans Artifactory |featureBranchSnapshot:"true"|
 |artifactoryPrimaryPath              | permet de spécifier le début du chemin sur Artifactory directement pour les jobs Puppet |artifactoryPrimaryPath:"ans"|
