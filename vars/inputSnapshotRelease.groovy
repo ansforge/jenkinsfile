@@ -11,10 +11,9 @@ def call() {
             env.newReleaseVersion = myParam.newReleaseVersion
         }
     } catch (err) {
-
         // Récupération de nom de l'artifact et de la version depuis le pom à l'aide du Pipeline Utility Steps plugin
         env.newSnapshotVersion = "${pomVersion}"
-		env.newReleaseVersion = "${pomVersion}"
-		echo "Timeout - pas de release - pomVersion = ${pomVersion}"
+        env.newReleaseVersion = "${pomVersion}"
+        echo "Timeout - pas de release - pomVersion = ${pomVersion}"
     }
 }
